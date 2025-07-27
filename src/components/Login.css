@@ -1,0 +1,79 @@
+/* Overall page background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #edcbf6; /* pastel pinkish-purple as you wanted */
+}
+
+/* Login box */
+.login-form {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+.login-form h2 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+/* Subheading */
+.login-form p {
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.login-link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-link:hover {
+  color: #0056b3;
+}
+
+
+/* Inputs */
+.login-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Button */
+.login-form button {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #000000;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.login-form button:hover {
+  background-color: #333333;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
