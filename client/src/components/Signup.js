@@ -1,10 +1,15 @@
 // src/components/Signup.js
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom'; // 
+import { Link } from 'react-router-dom';
+import { auth } from '../../../src/firebase';
 import './Signup.css';
 
 const Signup = () => {
+  const navigate = useNavigate();
+
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,6 +23,7 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(userCredential.user, { displayName: name });
       alert('Signup successful!');
+      navigate('/login');
     } catch (err) {
       setError(err.message);
     }
@@ -28,7 +34,7 @@ const Signup = () => {
       <form className="signup-form" onSubmit={handleSignup}>
         <h2>Create New Account</h2>
         <p>
-          Already registered? <span className="login-link">Login</span>
+           Already registered? <Link to="/login" className="login-link">Login</Link>
         </p>
 
         <input
