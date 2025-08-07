@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signup from '../client/src/components/Signup'; // adjust path if it's in a folder
-import Login from '../client/src/components/Login';
+import Signup from './components/Signup'; // adjust path if it's in a folder
+import Login from './components/Login';
 import { Navigate } from 'react-router-dom';
 
 function App() {
